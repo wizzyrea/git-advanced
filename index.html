@@ -109,7 +109,7 @@
 							1. Your email address
 							1. Your favourite text editor
 
-							```
+							```bash
 							git config --global user.name "Dr. Henry Killinger"
 							git config --global user.email "fu@bar.baz"
 							git config --global core.editor vim
@@ -127,7 +127,7 @@
 							* Show branches and tags in git log
 							* Setup rebase as the default strategy for git pull
 
-							```
+							```bash
 							git config --global color.ui always
 							git config --global push.default current
 							git config --global log.decorate full
@@ -406,7 +406,7 @@
 
 					<section data-markdown>
 						### Blame: Basic usage
-						```
+						```bash
 						git blame $filename
 
 						# to get the context around the change of a line
@@ -469,26 +469,28 @@
 						2. Checkout the changes made with git log
 						3. Use bisect with v1 and v2 tags as good/bad commits
 						4. find the commit that broke the page
-						```
+						```bash
 						git clone https://github.com/theflimflam/jabberwocky
 						git fetch --tags
 						git log -p
 						git log --stat
 						git bisect start $bad $good
 						```
+
 						Exhibits wanted behaviour?
-						```
+						```bash
 						git bisect good
 						```
+
 						Exhibits unwanted behaviour?
-						```
+						```bash
 						git bisect bad
 						```
 					</section>
 
 					<section data-markdown>
 						Don't forget to tidy up with...
-						```
+						```bash
 						git bisect reset
 						```
 					</section>
@@ -502,7 +504,7 @@
 							4. Try git blame on the .gitignore file
 							5. With this info, show the commit that blacklisted bower_components
 
-							```
+							```bash
 							git clone https://github.com/jquery/jquery
 							git log --grep 'asdf'
 							git log -S 'asdf'
@@ -585,7 +587,7 @@
 					<section data-markdown>
 						### Mastering branches: Commands
 						Interesting commands with branches
-						```
+						```bash
 						git checkout $branch
 						git reset $ref
 						git rebase $branch
@@ -687,15 +689,17 @@
 							----------------------------------------
 							### Quick activity
 							Add your own verse to the jabberwocky poem, then run
-							```
+							```bash
 							git add -p
 							```
+
 							Check what's happened with
-							```
+							```bash
 							git status
 							```
+
 							Put stuff back with
-							```
+							```bash
 							git reset HEAD
 							```
 						</div>
@@ -716,12 +720,12 @@
 							Source control is about social coding and interactions.
 
 							A conflict should be a conversation. When you see
-							```
+							```bash
 							CONFLICT (content): Merge conflict in jabberwocky.html
 							Automatic merge failed; fix conflicts and then commit the result.
 							```
 							Get info with
-							```
+							```bash
 							git status
 							git blame $file
 							```
@@ -730,7 +734,7 @@
 							1. HEAD is work of yours
 							2. $ref is the thing you're in conflict with
 
-							```
+							```bash
 							git reflog
 							git merge $ref
 							```
@@ -783,7 +787,7 @@
 							is just mushing content around in there.
 
 							To modify remotes...
-							```
+							```bash
 							git remote add $alias $location
 							git remote rm $alias $location
 							```
@@ -802,7 +806,7 @@
 							Share your terrible poetry with your neighbour.
 
 							This is for unauthenticated read-only access.
-							```
+							```bash
 							cd ~/jabberwocky/.git
 							touch git-daemon-export-ok
 							git daemon --reuseaddr --base-path=~/jabberwocky/ ~/jabberwocky/
@@ -810,12 +814,12 @@
 							Where ~/jabberwocky is the jabberwocky checkout.
 
 							When this is setup, exchange details and try clone...
-							```
+							```bash
 							git clone git://$host/ jabberwocky-neighbour
 							cd jabberwocky-neighbour
 							```
 							or add a remote...
-							```
+							```bash
 							git remote add git://$host/ neighbour
 							git fetch --all
 							git log neighbour/master
@@ -836,7 +840,7 @@
 							### Working with people who don't enjoy source control
 							Idea #2: Manage their commits and merges
 
-							```
+							```bash
 							while true; do
 								clear;
 								git add .
@@ -859,14 +863,14 @@
 
 							----------------------------------------
 							Discuss:
-							```
+							```bash
 							git pull --rebase
 							```
-							```
+							```bash
 							git config --global branch.autosetuprebase always
 							git pull
 							```
-							```
+							```bash
 							git rebase --abort
 							git merge --abort
 							```
