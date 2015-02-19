@@ -19,7 +19,7 @@
 		<link rel="stylesheet" href="css/theme/catalyst.css" id="theme">
 
 		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="lib/css/solarized_light.css">
 
 		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
 		<script>
@@ -148,7 +148,6 @@
 						<div><img src="images/qr-cheatsheet.png" style="border:0"></div>
 					</section>
 
-
 					<section data-markdown>
 						<script type="text/template">
 							### Unlocking achievements, making git a bit more fun
@@ -165,7 +164,6 @@
 					<section data-markdown>
 						![fork me](images/github-git-acheivements.png)
 					</section>
-
 
 					<section>
 						<div data-markdown>
@@ -1081,7 +1079,8 @@
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					//{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/markdown/highlight_upstream.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
 					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
