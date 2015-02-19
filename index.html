@@ -101,6 +101,7 @@
 							- Basic config for these machines
 							- Good config defaults
 							- Quick review of basic git
+							- Unlocking achievements, making git a bit more fun
 						</script>
 					</section>
 					<section data-markdown>
@@ -151,25 +152,8 @@
 						</p>
 						<div><img src="images/qr-cheatsheet.png" style="border:0"></div>
 					</section>
-				</section>
 
-				<!-- Personal workflows -->
-				<section>
-					<section data-markdown>
-						<script type="text/template">
-							* Getting Started
-							* **Personal workflows** <-- you are here
-							* Team workflows
-							* Client workflows
-							--------------------------------------------------------------------------------
-							## Overview: Personal workflows
-							- Unlocking achievements, making git a bit more fun
-							- Context hunting / Isolate and Triage issues
-							- Mastering branches
-							- Audit work interactively
-							- Manage merge conflicts like a pro
-						</script>
-					</section>
+
 					<section data-markdown>
 						<script type="text/template">
 							### Unlocking achievements, making git a bit more fun
@@ -181,6 +165,7 @@
 							Flaunt your achievements with a Splashy page!
 						</script>
 					</section>
+
 					<section
 						data-markdown
 						data-background-image="images/fork.gif"
@@ -191,94 +176,97 @@
 							![fork](images/github-git-acheivements.png)
 						</script>
 					</section>
+
 					<section data-markdown>
-						<script type="text/template">
-							### Unlocking achievements, making git a bit more fun
-							----------------------------------------
-							If you have a github account
+						### Unlocking Achievements in Git
+						----------------------------------------
+						If you have a github account
 
-							1. Go to https://github.com/icefox/git-achievements
-							2. Fork that repo
-							3. Go to your forked project, and clone it
-							----------------------------------------
+						1. https://github.com/icefox/git-achievements
+						2. Fork that repo
+						3. Go to your forked project, and clone it
+						----------------------------------------
 
-							No account? You can still run it locally
-							```
-							git clone https://github.com/icefox/git-achievements.git
-							```
-						</script>
+						No account? You can still run it locally, just don't let it push
+						```bash
+						git clone https://github.com/icefox/git-achievements.git
+						```
 					</section>
+
 					<section data-markdown>
 						<script type="text/template">
 							### Setup
 							Alias git-achievements in your shellrc file
 
-							```
+							```bash
 							vim ~/.bashrc
-							```
-							```
+
+							# Put these lines at the bottom of your file
 							export PATH="$PATH:~/git/git-achievements"
 							alias git="git-achievements"
-							```
-							```
+
+							# Run this ONLY IF YOU FORKED
 							git config --global achievement.upload "true"
 							```
 
-							Keep your achievements after the course, save this
-							```
+							Keep your achievements after the course, save this file
+							```bash
 							~/.git-achievements.log
 							```
 						</script>
 					</section>
+
 					<section>
-						<!-- hacked in position:absolute to stop this page scrolling -->
-						<h3>Some fun achievements I've unlocked</h3>
-						<div class="fragment current-visible" style="position:absolute;">
-							<p>--------------------------------------------------------------------------------</p>
-							<p>Cathedral Worker (Level 1)</p>
-							<p>Cloned submodule repository and checked out commits specified by superproject.</p>
-							<p>--------------------------------------------------------------------------------</p>
-						</div>
-						<div class="fragment current-visible" style="position:absolute;">
-							<p>--------------------------------------------------------------------------------</p>
-							<p>Garage Inventor (Level 1)</p>
-							<p>Used a custom alias for a Git command</p>
-							<p>--------------------------------------------------------------------------------</p>
-						</div>
-						<div class="fragment current-visible" style="position:absolute;">
-							<p>--------------------------------------------------------------------------------</p>
-							<p>Banker (Level 5)</p>
-							<p>Join two or more development histories together with git-merge.</p>
-							<p>--------------------------------------------------------------------------------</p>
-						</div>
-						<div class="fragment current-visible" style="position:absolute;">
-							<p>--------------------------------------------------------------------------------</p>
-							<p>Apprentice Thug (Level 3)</p>
-							<p>Forced pushed a branch with git-push -f</p>
-							<p>--------------------------------------------------------------------------------</p>
-						</div>
-						<div class="fragment current-visible" style="position:absolute;">
-							<p>--------------------------------------------------------------------------------</p>
-							<p>Let there be light</p>
-							<p>Commit without a parent.</p>
-							<p>--------------------------------------------------------------------------------</p>
-						</div>
-						<div class="fragment current-visible">
-							<p>If there's more interest...<p>
-							<p><a href="pages/git-achievements/index.html" target="_blank">
-								--> @theflimflam's achievements -->
-							</a></p>
-						</div>
+						<h3>Fun achievements to unlock!</h3>
 					</section>
-					<section data-background-image="images/dazzle.gif">
-					</section>
+
 					<section>
-						<h3>Typical git workflow</h3>
-						<img
-							src="images/individual-workflow.svg"
-							height="500px"
-						>
+						<hr>
+						<p>Banker (Level 5)</p>
+						<p>Join two or more development histories together with git-merge.</p>
+						<hr>
 					</section>
+
+					<section>
+						<hr>
+						<p>Garage Inventor (Level 1)</p>
+						<p>Used a custom alias for a Git command</p>
+						<hr>
+					</section>
+
+					<section>
+						<hr>
+						<p>Apprentice Thug (Level 3)</p>
+						<p>Forced pushed a branch with git-push -f</p>
+						<hr>
+					</section>
+
+					<section>
+						<hr>
+						<p>Let there be light</p>
+						<p>Commit without a parent.</p>
+						<hr>
+					</section>
+
+					<section data-background-image="images/dazzle.gif"></section>
+
+				</section>
+
+				<!-- Personal workflows -->
+				<section>
+					<section data-markdown>
+						* Getting Started
+						* **Personal workflows** <-- you are here
+						* Team workflows
+						* Client workflows
+						--------------------------------------------------------------------------------
+						## Overview: Personal workflows
+						- Context hunting / Isolate and Triage issues
+						- Mastering branches
+						- Audit work interactively
+						- Manage merge conflicts like a pro
+					</section>
+
 					<section>
 						<h3>Tools suited to personal workflow</h3>
 						<div data-markdown>
@@ -288,212 +276,226 @@
 								- Update, Test: Audit work interactively
 								- Share: Manage merge conflicts like a pro
 						</div>
-						<img
-							src="images/individual-workflow.svg"
-							height="500px"
-						>
 					</section>
-					<section data-markdown> <!-- Context hunting: Log Bisect, Blame, Pickaxe -->
-						<script type="text/template">
+
+					<section>
+						<img src="images/individual-workflow.svg" height="500px">
+					</section>
+
+					<section data-markdown>
+						### Context hunting / Isolate, Triage
+						This is a BEFORE YOU START thing, helps isolate and triage
+
+						----------------------------------------
+						Context is important so you can...
+
+						* Avoid regressing your codebase
+						* Find out if code is still under warantee
+						* Get help if you get stuck, seek out a human
+						----------------------------------------
+					</section>
+
+					<section data-markdown>
 							### Context hunting / Isolate, Triage
-							----------------------------------------
-							This is a BEFORE YOU START thing, helps isolate and triage
-
-							Context is important when you start to
-
-							1. Avoid regressing your codebase
-							2. Find out if code is still under warantee
-							3. Get help if you get stuck, seek out a human
-							----------------------------------------
-
 							- Personal workflows...
 								- Isolate and Triage: Context hunting
-									* Log - Show commit logs
+									* __Log - Show commit logs &lt;-- you are here!__
 									* Bisect - binary search for bugs
 									* Blame - revision and author for lines of a file
 									* Pickaxe - Search commit diffs for changes
-						</script>
+								- Work: Mastering branches
+								- Update, Test: Audit work interactively
+								- Share: Manage merge conflicts like a pro
 					</section>
-					<section> <!-- Git log -->
-						<div data-markdown>
-							<script type="text/template">
-								### Context hunting / Isolate, Triage
-								- Personal workflows...
-									- Isolate and Triage: Context hunting
-										* Log <-- you are here
-										* Bisect
-										* Blame
-										* Pickaxe
-								----------------------------------------
-							</script>
-						</div>
-						<div data-markdown class="fragment current-visible" style="position:absolute;">
-							<script type="text/template">
-								Regular log
-								```
-								git log
-								```
-								![regular git log](images/git-log.png)
-							</script>
-						</div>
-						<div data-markdown class="fragment current-visible" style="position:absolute;">
-							<script type="text/template">
-								Show me contents of patches
-								```
-								git log -p
-								```
-								![patch mode git log](images/git-log-p.png)
-							</script>
-						</div>
-						<div data-markdown class="fragment current-visible" style="position:absolute;">
-							<script type="text/template">
-								Show me a summary of patches
-								```
-								git log --stat
-								```
-								![stats](images/git-log-stat.png)
-							</script>
-						</div>
-						<div data-markdown class="fragment current-visible" style="position:absolute;">
-							<script type="text/template">
-								Find changes associated with text in a commit message:
-								```
-								git log --grep '$search_term'
-								git log --grep 'bug#1234'
-								```
-								![grep for messages](images/git-log-grep-term.png)
-							</script>
-						</div>
-					</section>
-					<section> <!-- Git bisect -->
-						<div data-markdown>
-							<script type="text/template">
-								### Context hunting / Isolate, Triage
-								- Personal workflows...
-									- Isolate and Triage: Context hunting
-										* Log
-										* Bisect <-- you are here
-										* Blame
-										* Pickaxe
-								----------------------------------------
-							</script>
-						</div>
-						<div data-markdown class="fragment current-visible" style="position:absolute;">
-							<script type="text/template">
-								To start bisecting, you use these commands
-								```
-								git bisect start $bad_commit $good_commit
-								```
-								'Unwanted' behaviour?
-								```
-								git bisect bad
-								```
-								'Wanted' behaviour?
-								```
-								git bisect good
-								```
-								Tidy up
-								```
-								git bisect reset
-								```
-							</script>
-						</div>
-						<div data-markdown class="fragment current-visible" style="position:absolute;">
-							<script type="text/template">
-								Sometimes it's guess work
-								```
-								git bisect skip
-								```
 
-								Sometimes it's complicated to get back to your guess spot
-								```
-								git bisect log > bisect.log
-								git bisect reply bisect.log
-								```
-							</script>
-						</div>
+					<section data-markdown>
+						Regular log
+						```bash
+						git log
+						```
+						![regular git log](images/git-log.png)
 					</section>
-					<section data-markdown> <!-- Git blame -->
-						<script type="text/template">
-							### Context hunting / Isolate, Triage
-							- Personal workflows...
-								- Isolate and Triage: Context hunting
-									* Log
-									* Bisect
-									* Blame <-- you are here
-									* Pickaxe
-							----------------------------------------
-							Basic usage
-							```
-							git blame $filename
-							git show $hash
-							```
-							Ignore whitespace
-							```
-							git blame -w $filename
-							```
-							Copy paste detection in a file, and across the repo
-							```
-							git blame -M $filename
-							git blame -C $filename
-							```
-						</script>
-					</section>
-					<section> <!-- Git pickaxe -->
-						<div data-markdown>
-							### Context hunting / Isolate, Triage
-							- Personal workflows...
-								- Isolate and Triage: Context hunting
-									* Log
-									* Bisect
-									* Blame
-									* Pickaxe <-- you are here
-							----------------------------------------
-							```
-							git log -S 'some distinct line that changed'
-							git log --stat -S '$racebook_uri_result'
-							```
-							* Find all the changes to a line in your entire history
-							* The pickaxe can help find code that’s been deleted or moved
-							* Typically helps you with questions like
-							 - What happened to myFabuliousFunc(), it's gone!
-							 - When did $mySillyVariable get referenced everywhere?
 
-							* Works with log, diff, and format-patch
-						</div>
+					<section data-markdown>
+						Show me contents of patches
+						```bash
+						git log -p
+						```
+						![patch mode git log](images/git-log-p.png)
 					</section>
-					<section>
-						<div data-markdown>
-							### Activity: Testing bisect
-							1. Clone the jabberwocky repo, pull tags
-							2. Checkout the changes made with git log
-							3. Use bisect with v1 and v2 tags as good/bad commits
-							4. find the commit that broke the page
-							```
-							git clone https://github.com/theflimflam/jabberwocky
-							git fetch --tags
-							git log -p
-							git log --stat
-							git bisect start $bad $good
-							```
-							Exhibits wanted behaviour?
-							```
-							git bisect good
-							```
-							Exhibits unwanted behaviour?
-							```
-							git bisect bad
-							```
-						</div>
+
+					<section data-markdown>
+						Show me a summary of patches
+						```bash
+						git log --stat
+						```
+						![stats](images/git-log-stat.png)
 					</section>
-					<section>
-						<div data-markdown>
-							Tidy up with
-							```
-							git bisect reset
-							```
-						</div>
+
+					<section data-markdown>
+						Find changes associated with text in a commit message:
+						```bash
+						git log --grep '$search_term'
+						git log --grep 'bug#1234'
+						```
+						![grep for messages](images/git-log-grep-term.png)
 					</section>
+
+					<!-- Git bisect -->
+					<section data-markdown>
+						### Context hunting / Isolate, Triage
+						- Personal workflows...
+							- Isolate and Triage: Context hunting
+								* Log - Show commit logs
+								* __Bisect - binary search for bugs &lt;-- you are here!__
+								* Blame - revision and author for lines of a file
+								* Pickaxe - Search commit diffs for changes
+							- Work: Mastering branches
+							- Update, Test: Audit work interactively
+							- Share: Manage merge conflicts like a pro
+					</section>
+
+					<section data-markdown>
+						### Bisect: Binary search for bugs
+
+						You can search 100 commits in 10 steps to find a bad commit!
+
+						----------------------------------------
+						To bisect, you need...
+
+						1. A ref (tag/hash/branch) to a known bad commit
+						2. A ref to a known good commit
+
+						```bash
+						git bisect start $bad_commit $good_commit
+
+						# ... test your code ...
+						git bisect bad
+						git bisect good
+
+						# put things back with
+						git bisect reset
+						```
+					</section>
+
+					<section data-markdown>
+						### Bisect: When it's not testable
+						If your history has broken commits, maybe it's impossible to test
+
+						```bash
+						# test around an problematic commit
+						git bisect skip
+
+						# or save where you're up to, and come back later
+						git bisect log > bisect.log
+						# ... time passes
+						git bisect reset
+						git bisect reply bisect.log
+						```
+					</section>
+
+					<section data-markdown>
+						### Context hunting / Isolate, Triage
+						- Personal workflows...
+							- Isolate and Triage: Context hunting
+								* Log - Show commit logs
+								* Bisect - binary search for bugs
+								* __Blame - revision and author for lines of a file &lt;-- you are here!__
+								* Pickaxe - Search commit diffs for changes
+							- Work: Mastering branches
+							- Update, Test: Audit work interactively
+							- Share: Manage merge conflicts like a pro
+					</section>
+
+					<section data-markdown>
+						### Blame: Basic usage
+						```
+						git blame $filename
+
+						# to get the context around the change of a line
+						git show $hash
+						```
+						![git blame](images/git-blame.png)
+					</section>
+
+					<section data-markdown>
+						### Blame: Power tools
+						* Ignore whitespace changes (might be hiding a commit)
+						* Copy paste detection in a file, and across the repo
+						* Track refactorings of methods across a codebase
+						----------------------------------------
+
+						```bash
+						git blame -w $filename # ignore whitespace
+						git blame -m $filename # copy paste within the same file
+						git blame -C $filename # copy paste over the repo
+						```
+					</section>
+
+					<!-- Git blame -->
+					<section data-markdown>
+						### Context hunting / Isolate, Triage
+						- Personal workflows...
+							- Isolate and Triage: Context hunting
+								* Log - Show commit logs
+								* Bisect - binary search for bugs
+								* Blame - revision and author for lines of a file
+								* __Pickaxe - Search commit diffs for changes &lt;-- you are here!__
+							- Work: Mastering branches
+							- Update, Test: Audit work interactively
+							- Share: Manage merge conflicts like a pro
+					</section>
+
+					<section data-markdown>
+						### Pickaxe
+						What happened to __myFabuliousFunc()__, it's gone!
+
+						When did __$mySillyVariable__ get referenced everywhere?
+
+						----------------------------------------
+
+						Search commit diffs for changes
+
+						* Find all the changes to a line in your entire history
+						* The pickaxe can help find code that’s been deleted or moved
+						* Works with log, diff, format-patch and tig
+
+						```bash
+						git log -S 'some distinct line that changed'
+						git log --stat -S '$racebook_uri_result'
+						```
+					</section>
+
+					<section data-markdown>
+						### Activity: Testing bisect
+						1. Clone the jabberwocky repo, pull tags
+						2. Checkout the changes made with git log
+						3. Use bisect with v1 and v2 tags as good/bad commits
+						4. find the commit that broke the page
+						```
+						git clone https://github.com/theflimflam/jabberwocky
+						git fetch --tags
+						git log -p
+						git log --stat
+						git bisect start $bad $good
+						```
+						Exhibits wanted behaviour?
+						```
+						git bisect good
+						```
+						Exhibits unwanted behaviour?
+						```
+						git bisect bad
+						```
+					</section>
+
+					<section data-markdown>
+						Don't forget to tidy up with...
+						```
+						git bisect reset
+						```
+					</section>
+
 					<section>
 						<div data-markdown>
 							### Activity: Testing log, pickaxe, blame and show
@@ -517,154 +519,165 @@
 						<div data-markdown>
 							- Personal workflows...
 								- Isolate and Triage: Context hunting
-								- **Work: Mastering branches** <-- you are here
+								- __Work: Mastering branches &lt;-- you are here__
 								- Update, Test: Audit work interactively
 								- Share: Manage merge conflicts like a pro
 						</div>
+					</section>
+
+					<section>
 						<img
-							src="images/individual-workflow.svg"
-							height="500px"
+						src="images/individual-workflow.svg"
+						height="500px"
 						>
 					</section>
-					<section>
-						<h3>Mastering branches: Overview</h3>
-						<hr>
-						<div data-markdown class="fragment current-visible" style="position:absolute">
-							Git thinks in Snapshots, Not Differences
 
-							> The major difference between Git and any other VCS (Subversion and friends included)
-							> is the way Git thinks about its data.
+					<section data-markdown>
+						### Mastering branches: Overview
+						Git thinks in Snapshots, Not Differences
 
-							src: git-scm.com, ch 1.3 Getting Started: Git Basics
-						</div>
-						<div class="fragment current-visible" style="position:absolute">
-							<p>SVN commits</p>
-							<div>
-								<img src="images/branches-svn.png">
-							</div>
-							<p>Git commits</p>
-							<div>
-								<img src="images/branches-commits.png">
-							</div>
-						</div>
-						<div data-markdown class="fragment current-visible" style="position:absolute">
-							![](images/branches-typical.png)
-							![](images/branches-multi.png)
+						> The major difference between Git and any other VCS (Subversion and friends included)
+						> is the way Git thinks about its data.
 
-							Typical branching, images from http://git-scm.com
-						</div>
-						<div data-markdown class="fragment current-visible" style="position:absolute">
-							![](images/branches-perspective.png)
-
-							How branches can be used for workflow
-						</div>
-						<div data-markdown class="fragment current-visible" style="position:absolute">
-							* Nodes represent diffs with respect to each other
-							* Nodes represent entire filesystem layout on their own
-							* Nodes are immutable
-
-							----------------------------------------
-							You can describe nodes with a...
-
-							* **branch**			- a name to track your work
-							* **tag**					- a label, it doesn't move
-							* **commit hash**	- complete history and set of files
-							* **HEAD**				- your current checkout
-							* **$ref^**   		- above are $refs, chain ^ or ~ to go up a branch
-
-							----------------------------------------
-
-							Lets look at how we can use these with commands
-						</div>
+						_quote from git-scm.com, ch 1.3 "Getting Started: Git Basics"_
 					</section>
-					<section>
-						<h3>Mastering branches: Commands</h3>
-						<div data-markdown>
-							Interesting commands with branches
-							```
-							git checkout $branch
-							git reset $ref
-							git rebase $branch
-							git rebase --interactive $branch
-							```
-							----------------------------------------
-							* **Checkout**: context dependent command...
-								1. Either reset unstaged file(s)
-								2. Or switch branches
-							* **Rebase**: Batch move commits and rewrite history
-							* **Reset**: Move branches around arbitarily
-							* **Reflog**: Save my ass! What have I had 'checked out' recently?
-							----------------------------------------
-							Whiteboard time!
-						</div>
+
+					<section data-markdown>
+						### Branches: Git vs SVN
+						![Subversion commits](
+							images/branches-svn.png
+						)
+
+						----------------------------------------
+						![Git commits](
+							images/branches-commits.png
+						)
 					</section>
-					<section data-background-image="images/oops.gif">
-						<div data-markdown>
-							```
-							# NOES!! Undo!!
-							git reflog
-							```
-						</div>
+
+					<section data-markdown>
+						![Feature branches](
+							images/branches-multi.png
+						)
+						![Merge branches](
+							images/branches-typical.png
+						)
+
+						Branching should reflect your team's workflow.
 					</section>
-					<section>
-						<h3>Mastering branches: Headless state</h3>
-						<div data-markdown>
-							If you're not on a branch, git puts you in a headless state
-							```
-							git checkout $tag
-							git checkout $commit
-							```
-						</div>
-						<div data-markdown>
-							Trying something like this...
-							```
-							git checkout HEAD^
-							```
-							Results in something like this...
-						</div>
-						<div data-markdown>
-							```
-							You are in 'detached HEAD' state. You can look around, make experimental
-							changes and commit them, and you can discard any commits you make in this
-							state without impacting any branches by performing another checkout.
 
-							If you want to create a new branch to retain commits you create, you may
-							do so (now or later) by using -b with the checkout command again. Example:
+					<section data-markdown>
+						![](
+							images/branches-perspective.png
+						)
 
-							git checkout -b new_branch_name
-
-							HEAD is now at f4b37d8... CSS: Return values should be numbers
-							```
-							Which is git being melodramatic
-						</div>
+						Isolate work till you're ready to release
 					</section>
-					<section>
-						<div data-markdown>
-							### Activity: Mastering Branches
-							1. Navigate to your Jabberwocky repo clone
-							2. Checkout 'master'
-							3. Fix the bug, commit
-							4. Interactive rebase onto the tag v1
-							5. Squash your fix with 'Oops' and give it a message.
 
-							```
-							cd $jabberwocky_dir
-							vim jabberwocky.html
-							git add jabberwocky.html
-							git commit
-							git log
-							git rebase $ref --interactive
-							git log -p
-							```
+					<section data-markdown>
+						### Commits in context
+						* A single commit: you refer to an entire filesystem layout
+						* Multiple commits: you usually think in diffs
+						* Commits are immutable, but you can re-create a new history
 
-							...it's as if the error was never there.
+						----------------------------------------
+						You can describe nodes with a...
 
-							Now put it back
-							```
-							git reset origin/master --hard
-							```
-						</div>
+						* **branch**			- a name to track your work
+						* **tag**					- a label, it doesn't move
+						* **commit hash**	- complete history and set of files
+						* **HEAD**				- your current checkout
+						* **$ref^**   		- above are $refs, chain ^ or ~ to go up a branch
+
+						----------------------------------------
+
+						Lets look at how we can use these with commands
 					</section>
+
+					<section data-markdown>
+						### Mastering branches: Commands
+						Interesting commands with branches
+						```
+						git checkout $branch
+						git reset $ref
+						git rebase $branch
+						git rebase --interactive $branch
+						```
+						----------------------------------------
+						* **Checkout**: context dependent command...
+							1. Either reset unstaged file(s)
+							2. Or switch branches
+						* **Rebase**: Batch move commits and rewrite history
+						* **Reset**: Move branches around arbitarily
+						* **Reflog**: Save my ass! What have I had 'checked out' recently?
+						----------------------------------------
+						Whiteboard time!
+					</section>
+
+					<section data-markdown data-background-image="images/oops.gif">
+						```bash
+						# ...fiddle fiddle fiddle, fixing one thing
+						# OOP... NOOOOOOO!!!! Undo undo undo!
+						git reflog
+						```
+					</section>
+
+					<section data-markdown>
+						### Mastering branches: Headless state
+						If you're not on a branch, git puts you in a headless state
+						```bash
+						git checkout $tag
+						git checkout $commit
+						```
+
+						Trying something like this...
+						```bash
+						git checkout HEAD^
+						```
+					</section>
+
+					<section data-markdown>
+						But don't worry, git is being melodramatic when it says...
+
+						```bash
+						You are in 'detached HEAD' state. You can look around, make experimental
+						changes and commit them, and you can discard any commits you make in this
+						state without impacting any branches by performing another checkout.
+
+						If you want to create a new branch to retain commits you create, you may
+						do so (now or later) by using -b with the checkout command again. Example:
+
+						git checkout -b new_branch_name
+
+						HEAD is now at f4b37d8... CSS: Return values should be numbers
+						```
+					</section>
+
+					<section data-markdown>
+						### Activity: Mastering Branches
+						1. Navigate to your Jabberwocky repo clone
+						2. Checkout 'master'
+						3. Fix the bug, commit
+						4. Interactive rebase onto the tag v1
+						5. Squash your fix with 'Oops' and give it a message.
+
+						```bash
+						cd $jabberwocky_dir
+						vim jabberwocky.html
+						git add jabberwocky.html
+						git commit
+						git log
+						git rebase $ref --interactive
+						git log -p
+						```
+
+						...it's as if the error was never there.
+
+						Now put it back
+						```bash
+						git reset origin/master --hard
+						```
+					</section>
+
 					<section>
 						<h3>Tools suited to personal workflow</h3>
 						<div data-markdown>
@@ -674,11 +687,15 @@
 								- **Update, Test: Audit work interactively** <-- you are here
 								- Share: Manage merge conflicts like a pro
 						</div>
+					</section>
+
+					<section>
 						<img
 							src="images/individual-workflow.svg"
 							height="500px"
 						>
 					</section>
+
 					<section>
 						<div data-markdown>
 							### Audit work interactively
@@ -703,6 +720,7 @@
 							```
 						</div>
 					</section>
+
 					<section>
 						<h3>Tools suited to personal workflow</h3>
 						<div data-markdown>
@@ -712,11 +730,15 @@
 								- Update, Test: Audit work interactively
 								- **Share: Manage merge conflicts like a pro** <-- you are here
 						</div>
+					</section>
+
+					<section>
 						<img
 							src="images/individual-workflow.svg"
 							height="500px"
 						>
 					</section>
+
 					<section>
 						<div data-markdown>
 							### Manage merge conflicts like a pro
@@ -743,9 +765,8 @@
 							```
 						</div>
 					</section>
-					<section data-background-image="images/3-steps.gif">
-						<h3>How I hope you feel when you walk out of this room<h3>
-					</section>
+
+					<section data-background-image="images/3-steps.gif"></section>
 				</section>
 
 				<section>
@@ -1016,10 +1037,9 @@
 					Please leave an issue against the course github page.
 				</section>
 
-				<section data-markdown>
-					Big finish
-
-					![Boom](images/big-end.gif)
+				<section>
+					<p>Big finish</p>
+					<img src="images/big-end.gif" alt="Boom" style="height:500px;">
 				</section>
 			</div>
 
