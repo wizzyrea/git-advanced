@@ -467,23 +467,21 @@
 						### Activity: Testing bisect
 						1. Clone the jabberwocky repo, pull tags
 						2. Checkout the changes made with git log
-						3. Use bisect with v1 and v2 tags as good/bad commits
+						3. Use bisect with __v1__ and __v2__ tags as good/bad commits
 						4. find the commit that broke the page
+
 						```bash
-						git clone https://github.com/theflimflam/jabberwocky
+						git clone https://github.com/catalyst-training/jabberwocky
 						git fetch --tags
 						git log -p
 						git log --stat
 						git bisect start $bad $good
-						```
 
-						Exhibits wanted behaviour?
-						```bash
+						# Now test the code!
+						# When a commit exhibits wanted behaviour
 						git bisect good
-						```
 
-						Exhibits unwanted behaviour?
-						```bash
+						# When a commit exhibits unwanted behaviour
 						git bisect bad
 						```
 					</section>
@@ -800,33 +798,49 @@
 							1. rsync://host.xz/path/to/repo.git/
 						</div>
 					</section>
-					<section>
-						<div data-markdown>
+
+					<section data-markdown>
 							### Quickly setup local, network accessible repos
-							Share your terrible poetry with your neighbour.
+							Enter clustom alias! You just need to run this once...
 
-							This is for unauthenticated read-only access.
 							```bash
-							cd ~/jabberwocky/.git
-							touch git-daemon-export-ok
-							git daemon --reuseaddr --base-path=~/jabberwocky/ ~/jabberwocky/
+							git config --global alias.serve "daemon --verbose --export-all
+									--base-path=.git --reuseaddr --strict-paths .git/"
 							```
-							Where ~/jabberwocky is the jabberwocky checkout.
 
-							When this is setup, exchange details and try clone...
+							Now you too can share your terrible poetry with your neighbour!
+
+							Navigate to your repository, and run
 							```bash
-							git clone git://$host/ jabberwocky-neighbour
-							cd jabberwocky-neighbour
+							git serve
 							```
-							or add a remote...
+
+							And you'll be __Ready to rumble__
+						</section>
+
+						<section data-markdown>
+							### Pull work from your neighbour
 							```bash
+							# Find your IP address (or hostname)
+							ip ad
+
+							# Serve your jabberwocky poem to the network
+							cd ~/jabberwocky
+							git serve
+
+							# Get your neighbours network details
+							# Lets add their work to your repo
 							git remote add git://$host/ neighbour
-							git fetch --all
-							git log neighbour/master
+							git fetch
+
+							# What's different between our branches?
 							git diff neighbour/master master
+
+							# Merge their work in (merge conflict ahead)
+							git merge neighbour/master
 							```
-						</div>
 					</section>
+
 					<section>
 						<div data-markdown>
 							### Working with people who don't enjoy source control
@@ -852,7 +866,7 @@
 					</section>
 					<section>
 						<img src="images/under-attack.gif" height="500px">
-						<p>Non technical people wrestling with git</p>
+						<p>Wrestling with git</p>
 					</section>
 					<section>
 						<div data-markdown>
