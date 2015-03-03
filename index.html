@@ -94,29 +94,50 @@
 						* Part 4: Releases and Client workflows
 						--------------------------------------------------------------------------------
 						### Objectives
+						- Install some stuff
 						- Basic config for these machines
 						- Good config defaults
 						- Quick review of basic git
 						- Unlocking achievements, making git a bit more fun
 					</section>
+
 					<section data-markdown>
-						<script type="text/template">
-							### Basic config for these machines
+						### Install some stuff
 
-							Git would like you to specify
+						Sometimes you run old software :'(
 
-							1. Your full name
-							1. Your email address
-							1. Your favourite text editor
+						Does running
+						```bash
+						git --version
+						```
 
-							```bash
-							git config --global user.name "Dr. Henry Killinger"
-							git config --global user.email "fu@bar.baz"
-							git config --global core.editor vim
-							```
+						Show you something &lt; 1.9???
 
-							All these settings are storred in **~/.gitconfig**
-						</script>
+						Lets fix that!
+
+						```bash
+						sudo apt-add-repository ppa:git-core/ppa
+						sudo apt-get update
+						sudo apt-get install git
+						```
+					</section>
+
+					<section data-markdown>
+						### Basic config for these machines
+
+						Git would like you to specify
+
+						1. Your full name
+						1. Your email address
+						1. Your favourite text editor
+
+						```bash
+						git config --global user.name "Dr. Henry Killinger"
+						git config --global user.email "fu@bar.baz"
+						git config --global core.editor vim
+						```
+
+						All these settings are storred in **~/.gitconfig**
 					</section>
 					<section data-markdown>
 						<script type="text/template">
@@ -242,6 +263,7 @@
 						### Part 1: Getting started
 						### [COMPLETE]
 						* Objectives
+							- Install some stuff &#10004;
 							- Basic config for these machines &#10004;
 							- Good config defaults &#10004;
 							- Quick review of basic git &#10004;
